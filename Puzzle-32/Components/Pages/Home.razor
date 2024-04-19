@@ -1,0 +1,20 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<Component @ref=component Title="Hello" />
+
+<button @onclick="ClickMe">Click Me</button>
+
+@code {
+
+    Component component;
+
+    private void ClickMe()
+    {
+        // changing the title doesn't update the UI. Why?
+
+        // See the component.razor file for the solution
+        component.Title = $"Updated at {DateTime.Now.ToLongTimeString()}";
+    }
+}
