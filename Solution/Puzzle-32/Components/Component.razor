@@ -1,0 +1,13 @@
+﻿<h3>@Title</h3>
+
+@code {
+
+    private string _title;
+
+    [Parameter]
+    public string Title
+    {
+        get => _title;
+        set { _title = value; StateHasChanged(); }
+    }
+}
